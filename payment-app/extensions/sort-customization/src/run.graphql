@@ -1,0 +1,26 @@
+query RunInput {
+  cart {
+    deliveryGroups {
+      selectedDeliveryOption{
+        title
+      }
+    }
+  }
+  localization {
+    country {
+      isoCode
+    }
+  }
+  paymentMethods {
+    id
+    name
+  }
+  paymentCustomization {
+    metafield(
+      namespace: "$app:payment-customization"
+      key: "function-configuration"
+    ) {
+      value
+    }
+  }
+}

@@ -1,0 +1,79 @@
+query RunInput($selectedCollectionIds: [ID!], $tags: [String!]) {
+  cart {
+    deliveryGroups {
+      deliveryAddress {
+        city
+        zip
+        provinceCode
+      }
+      selectedDeliveryOption{
+        title
+        cost{
+          amount
+        }
+      }
+    }
+    cost {
+      totalAmount {
+        amount
+        currencyCode
+      }
+      subtotalAmount {
+        amount
+      }
+    }
+    buyerIdentity {
+      customer {
+        amountSpent {
+          amount
+        }
+        hasTags(tags: $tags){
+          tag
+          hasTag
+        }
+      }
+    }
+    lines {
+      cost{
+        totalAmount{
+          amount
+        }
+        subtotalAmount{
+          amount
+        }
+      }
+      quantity
+      merchandise {
+        ... on ProductVariant {
+          sku
+          weight
+          weightUnit
+          product {
+            inCollections(ids: $selectedCollectionIds) {
+              collectionId
+              isMember
+            }
+            inAnyCollection(ids: $selectedCollectionIds)
+          }
+        }
+      }
+    }
+  }
+  localization {
+    country {
+      isoCode
+    }
+  }
+  paymentMethods {
+    id
+    name
+  }
+  paymentCustomization {
+    metafield(
+      namespace: "$app:payment-customization"
+      key: "function-configuration"
+    ) {
+      value
+    }
+  }
+}

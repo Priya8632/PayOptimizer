@@ -1,0 +1,42 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix"
+    },
+    "devDependencies": {
+        "axios": "^1.1.2",
+        "eslint": "^9.3.0",
+        "eslint-plugin-vue": "^9.26.0",
+        "laravel-mix": "^6.0.49",
+        "laravel-vite-plugin": "^0.7.2",
+        "lodash": "^4.17.19",
+        "postcss": "^8.1.14",
+        "vite": "^4.0.0",
+        "vite-svg-loader": "^5.1.0",
+        "vue-loader": "^16.8.3"
+    },
+    "dependencies": {
+        "@ownego/polaris-vue": "^2.0.4",
+        "@shopify/app-bridge": "^3.7.10",
+        "@vueuse/core": "^10.9.0",
+        "moment": "^2.29.4",
+        "pinia": "^2.1.7",
+        "vue": "^3.4.21",
+        "vue-axios": "^3.5.2",
+        "vue-input-tag": "^2.0.7",
+        "vue-multiselect": "^3.0.0-beta.3",
+        "vue-router": "^4.3.0",
+        "vue-switches": "^2.0.1",
+        "vue-toggle-component": "^1.0.16",
+        "vuedraggable": "^4.1.0",
+        "vuesax": "^4.0.1-alpha.25"
+    }
+}
