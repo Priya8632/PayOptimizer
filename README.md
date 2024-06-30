@@ -56,7 +56,7 @@ Download from https://ngrok.com/
 `SHOPIFY_API_SECRET`= ""  
 `NAMESPACE`="payment-customization"  
 `KEY`="function-configuration"  
-`APP_ENV` = "production" (only on live instance default value is local)  
+<!-- `APP_ENV` = "production" (only on live instance default value is local)   -->
 `APP_NAME` = "set app name for email"
 
 ### Set your configuration on`shopify.app.toml` file
@@ -68,7 +68,7 @@ Download from https://ngrok.com/
 `dev_store_url` = 'set store name'  
 `redirect_urls` = [ "https://striking-mildly-catfish.ngrok-free.app/authenticate" ]  
 
-[webhooks.privacy_compliance]  
+<!-- [webhooks.privacy_compliance]   -->
 <!-- `customer_deletion_url` = "https://paymentapp.patoliyainfotech.com/api/webhooks/customer_deletion"  
 `customer_data_request_url` = "https://paymentapp.patoliyainfotech.com/api/webhooks/customer_request"  
 `shop_deletion_url` = "https://paymentapp.patoliyainfotech.com/api/webhooks/deletion"   -->
@@ -131,7 +131,7 @@ SLACK_NOTIFICATION_URL=""
 
 
 
-## Vendor Change Only On Production
+<!-- ## Vendor Change Only On Production
 -/var/www/html/shopify-custome-checkout/vendor/kyon147/laravel-shopify/src/Http/Middleware/VerifyShopify.php
 
 -Function :- `installRedirect`
@@ -148,5 +148,5 @@ return redirect($url);
 
 ```sh
 $url = 'https://paymentapp.patoliyainfotech.com/?'.http_build_query(['shop' => $shopDomain->toNative(), 'host' => $request->get('host')]);
-return redirect($url);
+return redirect($url); -->
 ```
