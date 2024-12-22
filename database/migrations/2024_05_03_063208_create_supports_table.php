@@ -16,7 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id')->notNull();
             $table->string('name')->notNull();
             $table->string('email')->notNull();
-            $table->string('message')->notNull();
+            $table->text('message')->notNull();
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
